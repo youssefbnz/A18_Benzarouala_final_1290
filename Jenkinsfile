@@ -11,13 +11,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t youssefbnz/a18_benzarouala_final_1290 .'
+                bat 'docker build -t youssefbenz/a18_benzarouala_final_1290 .'
             }
         }
 
         stage('Push Docker Image') {
             steps {
-                bat 'docker push youssefbnz/a18_benzarouala_final_1290'
+                bat 'docker push youssefbenz/a18_benzarouala_final_1290'
             }
         }
 
