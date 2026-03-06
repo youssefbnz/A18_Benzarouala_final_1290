@@ -5,19 +5,19 @@ pipeline {
 
         stage('List Directory') {
             steps {
-                bat 'dir'
+                sh 'ls'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t youssefbenz/a18_benzarouala_final_1290 .'
+                sh 'docker build -t youssefbenz/a18_benzarouala_final_1290 .'
             }
         }
 
         stage('Push Docker Image') {
             steps {
-                bat 'docker push youssefbenz/a18_benzarouala_final_1290'
+                sh 'docker push youssefbenz/a18_benzarouala_final_1290'
             }
         }
 
